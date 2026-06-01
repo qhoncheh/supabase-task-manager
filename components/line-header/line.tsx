@@ -8,7 +8,7 @@ const Line = () => {
         </div>
 
         <div className="relative text-center text-sm">
-          <span className="px-3 text-white/60">Or</span>
+          <span className="px-3 text-gray-800">Or</span>
         </div>
       </div>
     </>

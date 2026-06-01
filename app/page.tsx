@@ -86,7 +86,8 @@ export default function Home() {
               border
               border-white/20
               bg-white/5
-              text-white
+              text-black
+              font-bold
               hover:bg-white/10
             "
           > Create Account </Button>

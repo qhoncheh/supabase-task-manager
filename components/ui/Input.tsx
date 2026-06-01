@@ -18,7 +18,7 @@ export default function Input({
   return (
     <div>
       {label && (
-        <label className="block mb-2 text-sm text-white/80">
+        <label className="block mb-2 text-sm text-gray-800 font-bold">
           {label}
         </label>
       )}
