@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Supabase Task Manager
 
-## Getting Started
+A simple Task Manager application built with Next.js and Supabase to explore authentication, PostgreSQL, Row Level Security (RLS), migrations, and CRUD operations.
 
-First, run the development server:
+## Features
+
+* User Registration
+* User Login / Logout
+* Create Tasks
+* View Tasks
+* Update Task Status (Done / Undo)
+* Delete Tasks
+* PostgreSQL Database
+* Supabase Authentication
+* Row Level Security (RLS)
+* Database Migrations
+* Local Supabase Development Environment
+* Bun Compatibility
+
+## Tech Stack
+
+* Next.js
+* React
+* TypeScript
+* Supabase
+* PostgreSQL
+* Docker
+* Bun
+
+---
+
+## Project Structure
+
+```bash
+app/
+├── page.tsx
+├── dashboard/
+│   └── page.tsx
+
+src/
+└── lib/
+    └── supabase.ts
+
+supabase/
+└── migrations/
+```
+
+---
+
+## Database
+
+### Tasks Table
+
+| Column     | Type        |
+| ---------- | ----------- |
+| id         | uuid        |
+| title      | text        |
+| is_done    | boolean     |
+| user_id    | uuid        |
+| created_at | timestamptz |
+
+---
+
+## Security
+
+Row Level Security (RLS) is enabled.
+
+Implemented policies:
+
+* Users can view their own tasks
+* Users can insert their own tasks
+* Users can update their own tasks
+* Users can delete their own tasks
+
+---
+
+## Running Supabase Locally
+
+Start local Supabase services:
+
+```bash
+npx supabase start
+```
+
+Supabase Studio:
+
+```text
+http://127.0.0.1:54323
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd supabase-task-manager
+```
+
+Install dependencies:
+
+### Using npm
+
+```bash
+npm install
+```
+
+### Using Bun
+
+```bash
+bun install
+```
+
+---
+
+## Environment Variables
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+```
+
+---
+
+## Run Development Server
+
+Using npm:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Using Bun:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Database Migrations
 
-To learn more about Next.js, take a look at the following resources:
+Create migration:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx supabase migration new create_tasks
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Apply migrations:
 
-## Deploy on Vercel
+```bash
+npx supabase db reset
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## What I Learned
+
+During this project I gained hands-on experience with:
+
+* Supabase Local Development
+* PostgreSQL
+* Authentication
+* Row Level Security (RLS)
+* Database Policies
+* Migrations
+* Next.js Integration
+* Docker
+* Bun Runtime
+
+---
+
+## Author
+
+Ataei
