@@ -16,9 +16,9 @@ export default function Input({
   type = 'text'
 }: InputProps) {
   return (
-    <div>
+    <div className="w-full">
       {label && (
-        <label className="block mb-2 text-sm text-gray-800 font-bold">
+        <label className="block mb-2 text-sm font-bold text-gray-800">
           {label}
         </label>
       )}
@@ -37,7 +37,7 @@ export default function Input({
           px-5
           py-4
           text-gray-800
-          placeholder:text-white/50
+          placeholder:text-gray-400
           outline-none
         "
       />
