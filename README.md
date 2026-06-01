@@ -37,8 +37,7 @@ app/
 ├── dashboard/
 │   └── page.tsx
 
-src/
-└── lib/
+ lib/
     └── supabase.ts
 
 supabase/
