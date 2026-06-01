@@ -54,7 +54,7 @@ return (
         relative
         w-full
         max-w-lg
-        rounded-[32px]
+        rounded-4xl
         border
         border-white/20
         bg-white/10
@@ -69,13 +69,11 @@ return (
         <h1 className="text-5xl font-light mb-4">
           Welcome !
         </h1>
-
         <p className="text-white/70">
           Sign in to access your Supabase
           Task Manager
         </p>
       </div>
-
       <div className="space-y-6">
         <div>
           <label className="block mb-2 text-sm text-white/80">

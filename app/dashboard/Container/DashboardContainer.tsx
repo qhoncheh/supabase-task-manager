@@ -1,10 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-
 import TaskList from '@/components/task/TaskLists'
-
-
 import { Task } from '@/types/task'
 import DashboardHeader from '../header/Header'
 import DashboardStats from '../DashboardStats/DashboardStats'
@@ -39,17 +36,14 @@ export default function DashboardContainer() {
       <DashboardHeader
         onLogout={logout}
       />
-
       <DashboardStats
         tasks={tasks}
       />
-
       <AddTaskForm
         title={title}
         setTitle={setTitle}
         onAdd={addTask}
       />
-
       <TaskList
         tasks={tasks}
         onToggle={toggleTask}

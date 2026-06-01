@@ -13,12 +13,10 @@ export default function DashboardHeader({
         <h1 className="text-4xl font-light text-black">
           Task Manager
         </h1>
-
         <p className="text-black mt-2">
           Manage your tasks with Supabase
         </p>
       </div>
-
       <Button
         onClick={onLogout}
         className="
